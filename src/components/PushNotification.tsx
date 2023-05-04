@@ -14,7 +14,7 @@ function PushNotification() {
       const pushSubscription = await registration.pushManager.subscribe(subscribeOptions);
       setSubscription(pushSubscription as any);
 
-      await fetch('http://localhost:8080/subscribe', {
+      await fetch('https://rezayari.ir:8000/subscribe', {
         method: 'POST',
         body: JSON.stringify(pushSubscription),
         headers: {
