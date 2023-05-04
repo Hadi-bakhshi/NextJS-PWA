@@ -1,6 +1,7 @@
 const withPWA = require('next-pwa')({
   dest: 'public',
   disable: process.env.NODE_ENV !== 'production',
+  // swSrc: 'public/serviceWorker.js',
 });
 // const runtimeCaching = require('next-pwa/cache');
 // import withPWA from 'next-pwa';

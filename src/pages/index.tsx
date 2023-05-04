@@ -1,6 +1,7 @@
 // import Image from 'next/image';
 // import { Inter } from 'next/font/google';
 
+import PushNotification from '@/components/PushNotification';
 import { ChangeEvent, useState } from 'react';
 
 // const inter = Inter({ subsets: ['latin'] });
@@ -10,6 +11,7 @@ interface IVals {
 }
 export default function Home() {
   const [value, setValue] = useState<IVals>({ text: '', number: 0 });
+
   const changeHandler = (e: ChangeEvent<HTMLInputElement>) => {
     setValue({ ...value, [e.target.name]: e.target.value });
     console.log(value);
@@ -24,6 +26,8 @@ export default function Home() {
         <div>
           <p>text:{value.text}</p>
           <p>number:{value.number}</p>
+          {/* <button>Click</button> */}
+          <PushNotification />
         </div>
       </section>
     </main>
